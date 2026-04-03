@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 5%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 5%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 5%;
+
+    --primary: 82 100% 55%;
+    --primary-foreground: 0 0% 5%;
+    --primary-light: 82 100% 85%;
+    --primary-glow: 82 100% 45%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 5%;
+
+    --muted: 0 0% 94%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 82 100% 55%;
+    --accent-foreground: 0 0% 5%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 82 100% 55%;
+
+    --radius: 0.75rem;
+
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+
+    --gradient-hero: radial-gradient(ellipse at center bottom, hsl(82 100% 75% / 0.6) 0%, hsl(82 100% 85% / 0.3) 40%, hsl(0 0% 100%) 70%);
+    --gradient-cta: linear-gradient(135deg, hsl(82 100% 55%) 0%, hsl(82 100% 40%) 100%);
+    --gradient-footer: linear-gradient(180deg, hsl(0 0% 96%) 0%, hsl(0 0% 100%) 100%);
+
+    --shadow-soft: 0 4px 20px hsl(82 100% 55% / 0.15);
+    --shadow-card: 0 2px 12px hsl(0 0% 0% / 0.06);
+    --shadow-elevated: 0 8px 30px hsl(0 0% 0% / 0.1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  .gradient-cta {
+    background: var(--gradient-cta);
+  }
+  .gradient-footer {
+    background: var(--gradient-footer);
+  }
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(82 100% 45%), hsl(82 100% 35%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
